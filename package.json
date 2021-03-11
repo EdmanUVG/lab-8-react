@@ -1,0 +1,19 @@
+{
+  "name": "lab-8-react",
+  "version": "1.0.0",
+  "description": "Laboratorio numero 8 de Sistemas y tecnologias web",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EdmanUVG/lab-8-react.git"
+  },
+  "author": "Edman Cota",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/EdmanUVG/lab-8-react/issues"
+  },
+  "homepage": "https://github.com/EdmanUVG/lab-8-react#readme"
+}
