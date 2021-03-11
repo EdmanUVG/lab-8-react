@@ -2,6 +2,7 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
+  mode: "production",
   entry: {
     index: "./src/index.js",
   },
@@ -9,13 +10,6 @@ module.exports = {
     path: path.resolve(__dirname, "dist"),
     filename: "[name].js",
   },
-  plugins: [
-    new HtmlWebpackPlugin({
-      template: "./src/index.html",
-      filename: "index.html",
-      chunks: ["index"],
-    }),
-  ],
   module: {
     rules: [
       {
@@ -28,20 +22,24 @@ module.exports = {
         ],
       },
       {
-        test: /\.s[ac]ss$/i,
-        use: [
-          
-          // Translates CSS into CommonJS
-          "css-loader",
-          // Compiles Sass to CSS
-          "sass-loader",
-        ],
+        test: /\.scss$/,
+        use: ["style-loader", "css-loader", "sass-loader"]
       },
       {
         test: /\.js$/,
-        loader: "babel-loader",
-        exclude: /(node_modules)/,
-      },
+        exclude: /node_modules/,
+        use: ["babel-loader"]
+      }
     ],
   },
+  optimization: {
+    splitChunks: { 
+        chunks: 'all',
+    },
+},
+  plugins: [
+    new HtmlWebpackPlugin({
+        template: './src/index.html'
+    })
+  ]
 };
