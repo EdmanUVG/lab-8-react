@@ -1,20 +1,31 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import '../index.css';
 import Container from 'react-bootstrap/Container';
 import Tilt from 'react-parallax-tilt';
+import ReactCardFlip from 'react-card-flip';
+import CSS from '../assets/images/css.png';
 
-class One extends Component {
-    render() {
-        return  (
-            // <Tilt glareEnable={true} glareMaxOpacity={0.5} transitionSpeed={400} >
-                <div className="carta">
-                
+export const One = () => {
+
+    const [isFlipped, setIsFlipped] = useState(false);
+
+    const handleClick = () => {
+        setIsFlipped(!isFlipped);
+    };
+    
+    return (
+        
+        <ReactCardFlip isFlipped = {isFlipped} flipDirection="vertical">
+                {/* <Tilt glareEnable={true} glareMaxOpacity={0.5} transitionSpeed={400} > */}
+                    <div className="carta" onClick={handleClick}>
                         <p>?</p>
-                
-                </div>
-            // </Tilt>
-        );
-    }
-}
-
-export default One;
+                    </div>
+                {/* <Tilt/> */}
+                {/* <Tilt glareEnable={true} glareMaxOpacity={0.5} transitionSpeed={400} > */}
+                    <div className="carta" onClick={handleClick}>
+                        <img src={CSS} width="50" height="50"/>
+                    </div>
+                {/* <Tilt/> */}
+        </ReactCardFlip>
+        )
+};

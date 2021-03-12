@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
-import One from './One';
+import { One } from './One';
 import Dos from './Dos';
+import { PrimaryButton } from './PrimaryButton';
+import { Scoreboard } from './Scoreboard';
 import '../index.css';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
@@ -14,26 +16,18 @@ class App extends Component {
         return  (
             <Container fluid>
                 <Row>
-                    <Col>
+                    <Col sm={9} md={9} lg={9}>
                         <One/>
                         <Dos/>
+                        <One/>
                     </Col>
-                    <Col>
+                    <Col sm={3} md={3} lg={3}>
+                        <Scoreboard/>
                         <h1>Right</h1>
-                    </Col>
-                </Row>
-                <Row>
-                    <Col>
-                        <h1>Hola</h1>
-                        <Button>SIGUIENTE</Button>
-                    </Col>
-                    <Col>
-                        <h1>Mundo</h1>
-                        <Alert variant="success">This Alert</Alert>
+                        <PrimaryButton/>
                     </Col>
                 </Row>
             </Container>
-
         );
     }
 }

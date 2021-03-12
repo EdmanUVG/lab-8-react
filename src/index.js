@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+import ReactCardFlip from 'react-card-flip';
 import App from './components/App';
 
 ReactDOM.render(<App/>, document.getElementById('root'));

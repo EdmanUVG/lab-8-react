@@ -40,8 +40,8 @@ body::after {
 
 
 .carta {
-	width: 150px;
-	height: 220px;
+	width: 140px;
+	height: 210px;
 	margin-top: 15px;
 	margin-left: 15px;
     margin-right: 0px;
@@ -59,7 +59,7 @@ body::after {
 
 
 .carta p {
-	font-size: 7em;
+	font-size: 6em;
 	color: #ffffff;
 	font-weight: 500;
 }
@@ -68,3 +68,40 @@ body::after {
     border-radius: 15px;
     width: 150px;
 }
+
+
+.scoreboard {
+	display: flex;
+	justify-content:center; 
+	align-items: center;
+	height: 120px;
+	width: 260px;
+	margin-top: 15px;
+	margin-left: 15px;
+	border-radius: 15px;
+	background: #262c37;
+	padding: 20px;
+	backdrop-filter: blur(5px);
+}
+
+.scoreboard p {
+	font-size: 45px;
+	margin: auto;
+	font-weight: 500;
+}
+
+.next {
+	background: #262c37;
+	width: 170px;
+	border: none;
+	padding: 10px 0px;
+	text-decoration: none;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	color: rgba(255, 255, 255, 0.4);
+	backdrop-filter: blur(5px);
+} 
+
+
+
+
