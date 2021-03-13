@@ -3,12 +3,12 @@ import { One } from './One';
 import Dos from './Dos';
 import { PrimaryButton } from './PrimaryButton';
 import { Scoreboard } from './Scoreboard';
+import { Congratulations } from './Congratulations';
 import '../index.css';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import Button from 'react-bootstrap/Button';
-import Alert from 'react-bootstrap/Alert';
+import Board from './Board';
 
 
 class App extends Component {
@@ -16,15 +16,12 @@ class App extends Component {
         return  (
             <Container fluid>
                 <Row>
-                    <Col sm={9} md={9} lg={9}>
-                        <One/>
-                        <Dos/>
-                        <One/>
+                    <Col sm={8} md={8} lg={8}>
+                        <Board/>
                     </Col>
-                    <Col sm={3} md={3} lg={3}>
-                        <Scoreboard/>
-                        <h1>Right</h1>
-                        <PrimaryButton/>
+                    <Col sm={4} md={4} lg={4}>
+                        {/* <Scoreboard/> */}
+                        {/* <Congratulations/> */}
                     </Col>
                 </Row>
             </Container>

@@ -1,0 +1,22 @@
+.card {
+    width: 140px;
+	height: 210px;
+    display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	backdrop-filter: blur(5px);
+    border-radius: 15px;
+	background: rgba(255, 255, 255, 0.1);
+    margin: 5px;
+    float: left;
+    font-size: 6em;
+	color: #ffffff;
+	font-weight: 500;
+    transition: transform 0.8s;
+}
+
+.face-up {
+    background-color: #2A78B8;
+    transform: rotateY(180deg);
+}

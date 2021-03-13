@@ -102,6 +102,15 @@ body::after {
 	backdrop-filter: blur(5px);
 } 
 
+.modal-dialog {
+    max-width: 480px !important;
+    max-height: 700px;
+}
+
+.modal-content {
+	background: #1C1E21;
+	height: 400px;
+}
 
 
 
