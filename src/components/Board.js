@@ -67,7 +67,7 @@ class Board extends React.Component {
                     this.flipCardTo(this.state.firstCard, false)
                     this.flipCardTo(cardIdx, false)
                     this.setState({firstCard: null});
-                }, 1000)
+                }, 800)
             }
         }
   

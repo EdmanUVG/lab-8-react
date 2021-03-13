@@ -19,5 +19,5 @@ export const Congratulations = () => {
             </Modal.Body>
         </Modal>
       </>
-    );
-  }
+  );
+}

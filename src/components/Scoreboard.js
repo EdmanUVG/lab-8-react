@@ -2,13 +2,15 @@ import React, { useState } from 'react';
 import '../index.css';
 import Container from 'react-bootstrap/Container';
 
-export const Scoreboard = () => {
-
-    const [count, setCount] = useState(0);
+class Scoreboard extends React.Component {
     
-    return (
+    render() {
+        return <Container className="scoreboard"> <p>4</p> </Container>
 
-        <Container  className="scoreboard" onClick={() => setCount(count + 1)}> <p>{count}</p> </Container>
+            // <Container className="scoreboard">
+                // <p>{props.count}</p>
+            // {/* </Container> */} 
+    }
+}
 
-        )
-};
+export default Scoreboard;

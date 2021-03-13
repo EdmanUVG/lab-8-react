@@ -2,13 +2,14 @@ import React, { Component } from 'react';
 import { One } from './One';
 import Dos from './Dos';
 import { PrimaryButton } from './PrimaryButton';
-import { Scoreboard } from './Scoreboard';
+import  Scoreboard from './Scoreboard';
 import { Congratulations } from './Congratulations';
 import '../index.css';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Board from './Board';
+import Welcome from './Welcome';
 
 
 class App extends Component {
@@ -20,7 +21,8 @@ class App extends Component {
                         <Board/>
                     </Col>
                     <Col sm={4} md={4} lg={4}>
-                        {/* <Scoreboard/> */}
+                        <Scoreboard/>
+                        <Welcome/>
                         {/* <Congratulations/> */}
                     </Col>
                 </Row>
