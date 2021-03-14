@@ -1,22 +1,21 @@
 .card {
-    width: 140px;
-	height: 210px;
+    width: 120px;
+	height: 160px;
     display: flex;
 	justify-content: center;
 	align-items: center;
 	cursor: pointer;
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
 	backdrop-filter: blur(5px);
     border-radius: 15px;
 	background: rgba(255, 255, 255, 0.1);
     margin: 5px;
-    float: left;
-    font-size: 6em;
+    font-size: 4.5em;
 	color: #ffffff;
 	font-weight: 500;
     transition: transform 0.8s;
 }
 
 .face-up {
-    background-color: #2A78B8;
     transform: rotateY(180deg);
 }

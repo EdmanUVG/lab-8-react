@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '../index.css';
+import '../index.scss';
 import Container from 'react-bootstrap/Container';
 import Tilt from 'react-parallax-tilt';
 import ReactCardFlip from 'react-card-flip';

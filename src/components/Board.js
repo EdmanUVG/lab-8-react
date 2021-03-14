@@ -1,5 +1,7 @@
 import React from 'react';
 import Card from './Card';
+import audioMatch  from '../assets/audio/match.mp3';
+import audioVictory from '../assets/audio/victory.mp3';
 import { Congratulations } from './Congratulations';
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
@@ -9,11 +11,18 @@ class Board extends React.Component {
     constructor(props) {
         super(props)
 
+        this.sound = new Audio(audioMatch);
+        this.soundVicotry = new Audio(audioVictory);
+
         const fronts = [
             '💩',
             '👹',
-            // '👿',
-            // '🚗',
+            '👿',
+            '🚗',
+            '💎',
+            '😁',
+            '⚽',
+            '🌓',
         ]
 
         const deck = fronts.concat(fronts).sort(() => Math.random() - 0.5)
@@ -57,9 +66,14 @@ class Board extends React.Component {
 
             if(firstCardContent === secondCardContent) {
                 this.setState({firstCard: null});
+
                 this.setState({count: this.state.count + 1}, () => {
-                    if (this.state.count === 2) {
-                        alert("Woooo!. Ganaste....");
+                    if(this.state.count < 4) {
+                        this.sound.play();
+                    }
+                    if (this.state.count === 4) {
+                        this.soundVicotry.play();
+                        <Congratulations/>
                     }
                 });
             } else {
@@ -67,7 +81,7 @@ class Board extends React.Component {
                     this.flipCardTo(this.state.firstCard, false)
                     this.flipCardTo(cardIdx, false)
                     this.setState({firstCard: null});
-                }, 800)
+                }, 700)
             }
         }
   

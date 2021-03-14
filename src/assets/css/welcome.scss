@@ -5,6 +5,29 @@
     .modal-content {
         background: #1C1E21;
         height: 400px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .welcome-body {
+            height: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .typed-text {
+                font-size: 24px;
+                font-weight: 500;
+            }
+        }
+
+        .start-body {
+            height: 100px;
+
+            .start-button {
+                width: 500px;
+            }
+        }
     }
 }
 

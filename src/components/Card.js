@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '../assets/css/card.css';
+import '../assets/css/card.scss';
 import Tilt from 'react-parallax-tilt';
 import { Scoreboard } from './Scoreboard';
 

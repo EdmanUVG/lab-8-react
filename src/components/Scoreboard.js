@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '../index.css';
+import '../index.scss';
 import Container from 'react-bootstrap/Container';
 
 class Scoreboard extends React.Component {

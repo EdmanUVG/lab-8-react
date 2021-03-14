@@ -3,6 +3,9 @@ import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
 import '../assets/css/welcome.scss';
 import Typed from 'react-typed';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 
 class Welcome extends React.Component {
 
@@ -19,17 +22,25 @@ class Welcome extends React.Component {
                 <Modal show={this.state.show}>
                     <Modal.Body>
 
-                        <Typed
-                        className="typed-text"
-                        strings={["Bienvenido", "Welcome", "Guatemala", "Facebook"]}
-                        typeSpeed={40}
-                        backSpeed={60}
-                        loop />
-
-                        <Button variant="secondary" onClick={() => this.setState({show: false})}>
-                            Close
-                        </Button>
-
+                        <Container>
+                            <Row>
+                                <Col className="welcome-body">
+                                <Typed
+                                    className="typed-text"
+                                    strings={["Bienvenido", "presione", "comenzar", "para jugar"]}
+                                    typeSpeed={40}
+                                    backSpeed={60}
+                                    loop />
+                                </Col>
+                            </Row>
+                            <Row>
+                                <Col className="start-body">
+                                    <Button className="start-button" variant="secondary" onClick={() => this.setState({show: false})}>
+                                        COMENZAR
+                                    </Button>
+                                </Col>
+                            </Row>
+                        </Container>
                     </Modal.Body>
                 </Modal>
             </> 
