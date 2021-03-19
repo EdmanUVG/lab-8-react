@@ -92,8 +92,8 @@ class Board extends React.Component {
   render () {
     return (
       this.state.deck.map((f, i) => (
+        // eslint-disable-next-line react/jsx-key
         <Card
-          key
           flip={() => {this.flip(i);}}
           content={f.content}
           faceUp={f.faceUp} />

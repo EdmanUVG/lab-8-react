@@ -18,7 +18,7 @@ class App extends Component {
             <Board/>
           </Col>
           <Col sm={4} md={4} lg={4}>
-            <Scoreboard attempt={0}/>
+            <Scoreboard/>
             <Welcome/>
           </Col>
         </Row>
