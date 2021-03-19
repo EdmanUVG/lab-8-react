@@ -1,16 +1,12 @@
-import React, { useState } from 'react';
-import '../index.scss';
-import Container from 'react-bootstrap/Container';
+import React from "react";
+import "../index.scss";
+import Container from "react-bootstrap/Container";
+import PropTypes from "prop-types";
 
-class Scoreboard extends React.Component {
-    
-    render() {
-        return <Container className="scoreboard"> <p>4</p> </Container>
+export const Scoreboard = ({value}) => {
+  return (<Container className="scoreboard"><p>{value}</p></Container>);
+};
 
-            // <Container className="scoreboard">
-                // <p>{props.count}</p>
-            // {/* </Container> */} 
-    }
-}
-
-export default Scoreboard;
+Scoreboard.propTypes = {
+  value: PropTypes.string,
+};

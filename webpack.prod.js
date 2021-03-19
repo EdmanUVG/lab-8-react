@@ -1,5 +1,8 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const OptimizeCssAssetsPlugin = require("optimize-css-assets-webpack-plugin");
+const TerserPlugin = require("terser-webpack-plugin");
+const MiniCssExtractPlugin  = require("mini-css-extract-plugin");
 
 module.exports = {
   mode: "production",
@@ -7,9 +10,28 @@ module.exports = {
     index: "./src/index.js",
   },
   output: {
-    path: path.resolve(__dirname, "dist"),
-    filename: "[name].js",
+	  filename: "[name].[contenthash].bundle.js",
+	  path: path.resolve(__dirname, "dist")
   },
+  optimization: {
+    minimizer: [
+      new OptimizeCssAssetsPlugin(), 
+		  new TerserPlugin(),
+		  new HtmlWebpackPlugin( {
+			  template: "./src/index.html",
+			  filename: "index.html",
+			  chunks: ["index"],
+			  minify: {
+				  removeAttributeQuotes: true,
+				  collapseWhitespace: true,
+				  removeComments: true
+			  }
+		  }),
+    ]
+  },
+  plugins: [
+    new MiniCssExtractPlugin({ filename: "[name].[contenthash].bundle.css"}),
+  ],
   module: {
     rules: [
       {
@@ -33,17 +55,17 @@ module.exports = {
         ],
       },
       {
-				test: /\.(jpeg|png|jpg|svg|gif)$/,
-				use: {
-					loader: 'file-loader',
-					options: {
-						name: '[path][name].[ext]'
-					},
-				},
-			},
+        test: /\.(jpeg|png|jpg|svg|gif)$/,
+			  use: {
+				  loader: "file-loader",
+					  options: {
+						  name: "[path][name].[ext]"
+					  },
+				  },
+      },
       {
         test: /\.mp3$/,
-        loader: 'file-loader',
+        loader: "file-loader",
       },
       {
         test: /\.js$/,
@@ -52,14 +74,4 @@ module.exports = {
       },
     ],
   },
-  optimization: {
-    splitChunks: { 
-        chunks: 'all',
-    },
-},
-  plugins: [
-    new HtmlWebpackPlugin({
-        template: './src/index.html'
-    })
-  ]
 };
