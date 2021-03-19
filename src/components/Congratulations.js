@@ -9,15 +9,13 @@ export const Congratulations = () => {
   const handleClose = () => setShow(false);
   
   return (
-    <>  
-      <Modal show={show} >
-        <Modal.Body>
-          Felicidades...
-          <Button variant="secondary" onClick={handleClose}>
-            Close
-          </Button>
-        </Modal.Body>
-      </Modal>
-    </>
+    <Modal show={show} >
+      <Modal.Body>
+        Felicidades...
+        <Button variant="secondary" onClick={handleClose}>
+          Close
+        </Button>
+      </Modal.Body>
+    </Modal>
   );
 };

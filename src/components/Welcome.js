@@ -20,7 +20,6 @@ class Welcome extends React.Component {
     return (
       <Modal show={this.state.show}>
         <Modal.Body>
-
           <Container>
             <Row>
               <Col className="welcome-body">

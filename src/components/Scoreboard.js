@@ -3,10 +3,11 @@ import "../index.scss";
 import Container from "react-bootstrap/Container";
 import PropTypes from "prop-types";
 
-export const Scoreboard = ({value}) => {
-  return (<Container className="scoreboard"><p>{value}</p></Container>);
+Scoreboard.propTypes = {
+  attempt: PropTypes.any,
 };
 
-Scoreboard.propTypes = {
-  value: PropTypes.string,
+export const Scoreboard = (props) => {
+  return <Container variant="scoreboard"><p>{props.attempt}</p></Container>;
 };
+

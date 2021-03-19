@@ -4,8 +4,8 @@
         "es2021": true
     },
     "extends": [
-        "airbnb",
-        "prettier"
+        "eslint:recommended",
+        "plugin:react/recommended"
     ],
     "parserOptions": {
         "ecmaFeatures": {
@@ -15,12 +15,18 @@
         "sourceType": "module"
     },
     "plugins": [
-        "react"
+        "react",
+        "prettier"
     ],
     "rules": {
+        "indent": ["error", 2],
+        "quotes": ["error", "double"],
         "semi": ["error", "always"],
         // "no-console": "error",
-        "no-unused-vars": "error",
-        "react/destructuring-assignment": ["error", "always"]
+        "react/destructuring-assignment": ["error", "never"],
+        "no-unused-vars": [
+            "error",
+            { "vars": "all", "args": "after-used", "ignoreRestSiblings": false }
+        ]
     }
 }

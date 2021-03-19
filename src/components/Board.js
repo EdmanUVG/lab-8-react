@@ -3,7 +3,6 @@ import React from "react";
 import Card from "./Card";
 import audioMatch  from "../assets/audio/match.mp3";
 import audioVictory from "../assets/audio/victory.mp3";
-import { Congratulations } from "./Congratulations";
 
 class Board extends React.Component {
 
@@ -58,7 +57,7 @@ class Board extends React.Component {
   flip(cardIdx) {
 
     this.setState(prevState => ({attempt: prevState.attempt + 1}), () => {
-      
+      console.log("Attempts" + this.state.attempt);
     });
 
     if(this.state.firstCard === null) {
@@ -70,13 +69,12 @@ class Board extends React.Component {
       if(firstCardContent === secondCardContent) {
         this.setState({firstCard: null});
 
-        this.setState({count: this.state.count + 1}, () => {
+        this.setState(prevState => ({count: prevState.count + 1}), () => {
           if(this.state.count < 8) {
             this.sound.play();
           }
           if (this.state.count === 8) {
             this.soundVicotry.play();
-            <Congratulations/>;
           }
         });
       } else {
@@ -93,16 +91,13 @@ class Board extends React.Component {
   
   render () {
     return (
-      this.state.deck.map((f, i) => {
-        return (
-          <>
-            <Card
-              flip={() => {this.flip(i);}}
-              content={f.content}
-              faceUp={f.faceUp} />
-          </>
-        );
-      })
+      this.state.deck.map((f, i) => (
+        <Card
+          key
+          flip={() => {this.flip(i);}}
+          content={f.content}
+          faceUp={f.faceUp} />
+      ))
     );
   }
 }
