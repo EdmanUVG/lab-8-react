@@ -1,6 +1,6 @@
 import React from "react";
 import "../assets/css/card.scss";
-import PropTypes from "prop-types";
+// import PropTypes from "prop-types";
 
 class Card extends React.Component {
 

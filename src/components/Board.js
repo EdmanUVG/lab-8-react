@@ -57,7 +57,8 @@ class Board extends React.Component {
   flip(cardIdx) {
 
     this.setState(prevState => ({attempt: prevState.attempt + 1}), () => {
-      console.log("Attempts" + this.state.attempt);
+      // eslint-disable-next-line react/prop-types
+      this.props.score(this.state.attempt);
     });
 
     if(this.state.firstCard === null) {
@@ -75,6 +76,7 @@ class Board extends React.Component {
           }
           if (this.state.count === 8) {
             this.soundVicotry.play();
+            alert("Whooo ganaste!");
           }
         });
       } else {
