@@ -55,14 +55,14 @@ module.exports = {
         ],
       },
       {
-        test: /\.(jpeg|png|jpg|svg|gif)$/,
-			  use: {
-				  loader: "file-loader",
-					  options: {
-						  name: "[path][name].[ext]"
-					  },
-				  },
-      },
+				test: /\.(jpeg|png|jpg|svg|gif)$/,
+				use: {
+					loader: "file-loader",
+					options: {
+						name: "[path][name].[ext]"
+					},
+				},
+			},
       {
         test: /\.mp3$/,
         loader: "file-loader",

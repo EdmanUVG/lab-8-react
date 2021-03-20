@@ -32,26 +32,6 @@ body::after {
 	clip-path: circle(20% at 10% 10%);
 }
 
-.scoreboard {
-	display: flex;
-	justify-content:center; 
-	align-items: center;
-	height: 120px;
-	width: 260px;
-	margin-top: 15px;
-	margin-left: 15px;
-	border-radius: 15px;
-	background: #262c37;
-	padding: 20px;
-	backdrop-filter: blur(5px);
-}
-
-.scoreboard p {
-	font-size: 45px;
-	margin: auto;
-	font-weight: 500;
-}
-
 .next {
 	background: #262c37;
 	width: 170px;

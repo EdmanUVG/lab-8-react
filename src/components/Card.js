@@ -1,6 +1,6 @@
 import React from "react";
 import "../assets/css/card.scss";
-// import PropTypes from "prop-types";
+import PropTypes from "prop-types";
 
 class Card extends React.Component {
 
@@ -30,10 +30,10 @@ class Card extends React.Component {
   }
 }
 
-// Card.propTypes = {
-//   faceUp: PropTypes.any,
-//   content: PropTypes.string,
-//   flip: PropTypes.bool
-// };
+Card.propTypes = {
+  faceUp: PropTypes.any,
+  content: PropTypes.string,
+  flip: PropTypes.bool
+};
 
 export default Card;
