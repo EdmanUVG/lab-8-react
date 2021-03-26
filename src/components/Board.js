@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 /* eslint-disable react/destructuring-assignment */
 import React from "react";
 import Card from "./Card";
@@ -76,7 +77,7 @@ class Board extends React.Component {
           }
           if (this.state.count === 8) {
             this.soundVicotry.play();
-            alert("Whooo ganaste!");
+            this.props.founds(this.state.count);
           }
         });
       } else {

@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import Modal from "react-bootstrap/Modal";
 import Button from "react-bootstrap/Button";
+import "../assets/css/welcome.scss";
+import Congrats from "../assets/images/congrats.png";
 
 export const Congratulations = () => {
 
@@ -11,7 +13,7 @@ export const Congratulations = () => {
   return (
     <Modal show={show} >
       <Modal.Body>
-        Felicidades...
+        <img src={Congrats} width="200" height="200" />
         <Button variant="secondary" onClick={handleClose}>
           Close
         </Button>

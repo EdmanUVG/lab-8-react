@@ -1,0 +1,99 @@
+@import "./variables";
+
+.col-4 {
+    height: 44px !important;
+}
+
+.next {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+    background: $primaryBackground;
+
+    a {
+        position: relative;
+        display: inline-block;
+        padding: 10px 30px;
+        text-decoration: none;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 0.4);
+        background: $backgroundBtn;
+        letter-spacing: 2px;
+        font-size: 16px;
+        transition: 0.5s; 
+
+        &:hover {
+            color: rgba(255, 255, 255, 1);
+        }
+
+        span {
+            display: block;
+            position: absolute;
+            background: #2894ff;
+
+            &:nth-child(1) {
+                left: 0;
+                bottom: 0;
+                width: 1px;
+                height: 100%;
+                transform: scaleY(0);
+                transform-origin: top;
+                transition: transform 0.5s;
+            }
+            &:nth-child(2) {
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                height: 1px;
+                transform: scaleX(0);
+                transform-origin: right;
+                transition: transform 0.5s;
+            }
+            &:nth-child(3) {
+                right: 0;
+                bottom: 0;
+                width: 1px;
+                height: 100%;
+                transform: scaleY(0);
+                transform-origin: top;
+                transition: transform 0.5s;
+            }
+            &:nth-child(4) {
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 1px;
+                transform: scaleX(0);
+                transform-origin: right;
+                transition: transform 0.5s;
+                transition-delay: 0.5s;
+            }
+        }
+        &:hover {
+            span{
+                &:nth-child(1) {
+                    transform: scaleY(1);
+                    transform-origin: bottom;
+                    transition: transform 0.5s;
+                }
+                &:nth-child(2) {
+                    transform: scaleX(1);
+                    transform-origin: left;
+                    transition: transform 0.5s;
+                }
+                &:nth-child(3) {
+                    transform: scaleY(1);
+                    transform-origin: bottom;
+                    transition: transform 0.5s;
+                    transition-delay: 0.5s;
+                }
+                &:nth-child(4) {
+                    transform: scaleX(1);
+                    transform-origin: left;
+                    transition: transform 0.5s;
+                    transition-delay: 0.5s;
+                }
+            }
+        }
+    }
+}
