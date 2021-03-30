@@ -2,13 +2,11 @@
 import React, { Component } from "react";
 import "../index.scss";
 import Container from "react-bootstrap/Container";
-// import Introduction from "./Introduction";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Board from "./Board";
 import  { Scoreboard } from "./Scoreboard";
 import { Congratulations } from "./Congratulations";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 class App extends Component {
 
@@ -33,12 +31,9 @@ class App extends Component {
   render() {
     return  (
       <Container fluid>
-
-        {/* <Introduction/> */}
-        
         <Row>
           <Col sm={8} md={8} lg={8} className="game-container">
-            <Board score={this.actualizar} founds={this.verificar}/>
+            <Board score={this.actualizar} founds={this.verificar} />
           </Col>
           <Col sm={4} md={4} lg={4}>
             <Scoreboard value={this.state.attempt} />

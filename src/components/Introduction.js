@@ -2,6 +2,7 @@ import React from "react";
 import "../assets/css/earth.scss";
 import Typed from "react-typed";
 import Logo from "../assets/images/logo-uvg.png";
+import { Link } from "react-router-dom";
 
 class Instroduction extends React.Component {
 
@@ -10,7 +11,9 @@ class Instroduction extends React.Component {
       <>
         <div id="nav-earth">
           <nav className="navbar">
-            <a className="navbar-brand"><img id="logo" src={Logo} height="35" /></a>
+            <Link to="/board">
+              <a className="navbar-brand"><img id="logo" src={Logo} height="35" /></a>
+            </Link>
           </nav>
         </div>
         <div className="scenes">

@@ -13,16 +13,13 @@ class Card extends React.Component {
 
   render() {
     let content;
-    // eslint-disable-next-line react/prop-types
     if(this.props.faceUp) {
-      // eslint-disable-next-line react/prop-types
       content = this.props.content;
     } else {
       content = "?";
     }
 
     return (
-      // eslint-disable-next-line react/prop-types
       <div onClick={this.props.flip} className={`card ${this.props.faceUp ? "face-up": ""}`}>
         {content}
       </div>

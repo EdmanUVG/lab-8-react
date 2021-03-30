@@ -4,8 +4,8 @@
   "description": "Laboratorio numero 8 de Sistemas y tecnologias web",
   "main": "index.js",
   "scripts": {
-    "build": "webpack serve --config webpack.prod.js --open",
-    "lint": "eslint ./"
+    "build": "webpack --config webpack.prod.js",
+    "lint": "eslint --ignore-path .gitignore ."
   },
   "repository": {
     "type": "git",

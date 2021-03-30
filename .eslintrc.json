@@ -22,7 +22,7 @@
         "indent": ["error", 2],
         "quotes": ["error", "double"],
         "semi": ["error", "always"],
-        // "no-console": "error",
+        "no-console": "error",
         "react/destructuring-assignment": ["error", "never"],
         "no-unused-vars": [
             "error",

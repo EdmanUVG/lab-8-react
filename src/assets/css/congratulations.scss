@@ -9,23 +9,18 @@
         align-items: center;
         justify-content: center;
 
-        .welcome-body {
-            height: 300px;
+        .modal-body {
             display: flex;
-            justify-content: center;
             align-items: center;
+            justify-content: center;
 
-            .typed-text {
-                font-size: 24px;
-                font-weight: 500;
+            .col-md-12, .col-lg-12, .col-sm-12 {
+                display: flex;
+                align-items: center;
+                justify-content: center;
             }
-        }
 
-
-        .start-body {
-            height: 100px;
-
-            .start-button {
+            button {
                 width: 500px;
                 background-color: white;
                 color: black;

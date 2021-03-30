@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const OptimizeCssAssetsPlugin = require("optimize-css-assets-webpack-plugin");
@@ -10,23 +11,23 @@ module.exports = {
     index: "./src/index.js",
   },
   output: {
-	  filename: "[name].[contenthash].bundle.js",
-	  path: path.resolve(__dirname, "dist")
+    filename: "[name].[contenthash].bundle.js",
+    path: path.resolve(__dirname, "dist")
   },
   optimization: {
     minimizer: [
       new OptimizeCssAssetsPlugin(), 
-		  new TerserPlugin(),
-		  new HtmlWebpackPlugin( {
-			  template: "./src/index.html",
-			  filename: "index.html",
-			  chunks: ["index"],
-			  minify: {
-				  removeAttributeQuotes: true,
-				  collapseWhitespace: true,
-				  removeComments: true
-			  }
-		  }),
+      new TerserPlugin(),
+      new HtmlWebpackPlugin( {
+        template: "./src/index.html",
+        filename: "index.html",
+        chunks: ["index"],
+        minify: {
+          removeAttributeQuotes: true,
+          collapseWhitespace: true,
+          removeComments: true
+        }
+      }),
     ]
   },
   plugins: [
@@ -55,14 +56,14 @@ module.exports = {
         ],
       },
       {
-				test: /\.(jpeg|png|jpg|svg|gif)$/,
-				use: {
-					loader: "file-loader",
-					options: {
-						name: "[path][name].[ext]"
-					},
-				},
-			},
+        test: /\.(jpeg|png|jpg|svg|gif)$/,
+        use: {
+          loader: "file-loader",
+          options: {
+            name: "[path][name].[ext]"
+          },
+        },
+      },
       {
         test: /\.mp3$/,
         loader: "file-loader",
